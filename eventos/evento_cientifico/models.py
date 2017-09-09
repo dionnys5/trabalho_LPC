@@ -54,7 +54,7 @@ class Evento(models.Model):
     
 
 class EventoCientifico(Evento):
-    issn = CharField(max_length=9)
+    issn = models.CharField(max_length=9)
 
     class Meta:
         verbose_name = 'Evento Cientifico'
