@@ -39,7 +39,7 @@ class Evento(models.Model):
     palavrasChave = models.CharField(max_length=128)
     logotipo = models.CharField(max_length=128)
     palavrasChave = models.CharField(max_length=128)
-    realizador = models.ForeignKey(PessoaFisica, related_name='realizadores', null=True, blank=False)
+    realizador = models.ForeignKey(Pessoa, related_name='realizadores', null=True, blank=False)
     cidade = models.CharField(max_length=50)
     uf = models.CharField(max_length=2)
     endereco = models.CharField(max_length=250)
