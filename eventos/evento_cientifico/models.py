@@ -26,9 +26,7 @@ class PessoaJuridica(Pessoa):
         verbose_name_plural = 'Pessoas Juridica'
 
 class Autor(Pessoa):
-    curriculo = models.CharField(max_length=128)
-    pai = models.CharField(max_length=128, null=True)
-    
+    curriculo = models.CharField(max_length=128)   
     class Meta:
         verbose_name = 'Autor'
         verbose_name_plural = 'Autores'
