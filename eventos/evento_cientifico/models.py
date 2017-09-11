@@ -64,5 +64,12 @@ class EventoCientifico(Evento):
 class ArtigoCientifico(models.Model):
     titulo = models.CharField(max_length=128)
     evento = models.ForeignKey(EventoCientifico, related_name='evento', null=True, blank=False)
-    
+    class Meta:
+        verbose_name = 'Artigo Cientifico'
+        verbose_name_plural = 'Artigos Cientificos'
+
+class Publicacao(models.Model):
+    autor = models.ForeignKey(Autor, related_name='Autor', null=True, blank=False)
+    artigo = models.ForeignKey(ArtigoCientifico, related_name='ArtigoCientifico', null=True, blank=False)
+
     
