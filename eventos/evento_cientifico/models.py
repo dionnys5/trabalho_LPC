@@ -71,5 +71,7 @@ class ArtigoCientifico(models.Model):
 class Publicacao(models.Model):
     autor = models.ForeignKey(Autor, related_name='Autor', null=True, blank=False)
     artigo = models.ForeignKey(ArtigoCientifico, related_name='ArtigoCientifico', null=True, blank=False)
-
+    class Meta:
+        verbose_name = 'Publicação'
+        verbose_name_plural = 'Publicações'
     
