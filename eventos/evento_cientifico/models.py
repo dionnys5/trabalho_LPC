@@ -48,7 +48,10 @@ class Evento(models.Model):
     class Meta:
         verbose_name = 'Evento'
         verbose_name_plural = 'Eventos'
+
     
+    def __str__(self):
+        return self.nome
 
 class EventoCientifico(Evento):
     issn = models.CharField(max_length=9)
@@ -64,6 +67,9 @@ class ArtigoCientifico(models.Model):
     class Meta:
         verbose_name = 'Artigo Cientifico'
         verbose_name_plural = 'Artigos Cientificos'
+
+    def __str__(self):
+        return self.titulo
 
 class Publicacao(models.Model):
     autor = models.ForeignKey(Autor, related_name='Autor', null=True, blank=False)
