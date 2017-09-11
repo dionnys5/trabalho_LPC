@@ -68,8 +68,7 @@ class ArtigoCientifico(models.Model):
         verbose_name = 'Artigo Cientifico'
         verbose_name_plural = 'Artigos Cientificos'
 
-    def __str__(self):
-        return self.titulo
+
 
 class Publicacao(models.Model):
     autor = models.ForeignKey(Autor, related_name='Autor', null=True, blank=False)
@@ -77,4 +76,8 @@ class Publicacao(models.Model):
     class Meta:
         verbose_name = 'Publicação'
         verbose_name_plural = 'Publicações'
+        
+    def __str__(self):
+        return "Autor: " + self.autor.nome +" Artigo: "+ self.artigo.titulo
+
     
