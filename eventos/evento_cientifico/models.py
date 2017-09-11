@@ -27,7 +27,6 @@ class PessoaJuridica(Pessoa):
 
 class Autor(Pessoa):
     curriculo = models.CharField(max_length=128)
-    artigos = models.CharField(max_length=128, null=True)
     pai = models.CharField(max_length=128, null=True)
     
     class Meta:
